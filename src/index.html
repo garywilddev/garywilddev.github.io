@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Free Web tutorials">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="John Doe">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="./assets/fonts/fontawesome-free-6.5.1-web/css/fontawesome.min.css" rel="stylesheet">
+  <link href="./assets/fonts/fontawesome-free-6.5.1-web/css/brands.min.css" rel="stylesheet">
+  <link href="./assets/fonts/fontawesome-free-6.5.1-web/css/solid.min.css" rel="stylesheet">
+    <title>Gary Sauvage</title>
+  </head>
+
+  <body>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="./scripts/behaviour.js"></script>
+    <header >
+      <div id="navContainer">
+        <div id="navBrand">
+          <i  class="fa-heart fa-solid" id="logo"></i>
+          <div id="info">
+            <h1>Gary Sauvage</h1>
+            <p>Developpeur Front-End Freelance</p>
+          </div>
+        </div>
+        <div class="burger burger--vortex">
+          <div class="burger-box">
+            <div class="burger-inner"></div>
+          </div>
+        </div>
+        <nav id="main-nav">
+          <ul id="menu-list">
+            <li><a href="#whoami">Qui suis-je ?</a></li>
+            <li><a href="#experience">Mon expertise</a></li>
+            <li><a href="#prices">Mes tarifs</a></li>
+            <li><a href="#contact">Me contacter</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main >
+      <section id="brand">
+        <h1>Gary Sauvage</h1>
+        <p>Developpeur Front-End Freelance</p>
+        <p class="warning"><i class="fa-solid fa-bell"></i> WEB SITE UNDER CONSTRUCTION <i class="fa-solid fa-hourglass-half"></i></p>
+      </section>
+      <section id="whoami" class="container">
+        <h2>Qui suis-je ?</h2>
+        <img id="profile-picture" class="img-fluid" src="./assets/images/profile-picture.jpeg" alt="My profile picture"/><p id="description">Je suis un développeur depuis plus de 10 ans dont 6 ans dans le developpement d'applications web.
+        Après quelques années dans l'industrie à me frotter à des technologies et des pratiques de développement pour client lourd, j'ai succombé aux sirènes du client léger et en particulier du développement web. Depuis 2017, j'ai accompagné en tant que salarié 2 startups - la première dans la logistique et la seconde dans la e-Santé - à développer et maintenir des applications web complexes à destinations de clients exigeants. Soucieux de la qualité et de la maintenabilité des produits fini, j'aime placer les bonnes pratiques d'architecture et de développement au centre de métier.
+        Friand d'aventures, d'apprentissage et de nouvelles expériences, c'est aujourd'hui en tant que freelance que je mets mon expertise à votre service.
+        </p>
+      </section>
+      <section id="experience"class="container">
+        <h2 >Mon expertise</h2>
+        <p>
+        Compétences Clés :
+        <br/>
+        Maîtrise des Langages : Expert en HTML, CSS et JavaScript, j'ai affiné mes compétences au fil des ans pour rester à la pointe des technologies émergentes.
+        <br/>
+        Frameworks Front-End : Mon expertise s'étend à l'utilisation de frameworks tels que React, Angular et Vue.js, me permettant de développer des applications web robustes et évolutives.
+        <br/>
+        Approche Orientée Utilisateur : Je m'efforce constamment de créer des interfaces intuitives et agréables, mettant l'utilisateur final au centre de mes préoccupations.
+        <br/>
+        Adaptabilité Agile : Mon expérience dans des environnements agiles a cultivé ma capacité à collaborer efficacement au sein d'équipes multidisciplinaires.</p>
+        <ul >
+          <li>
+            <h3>Front-End</h3>
+            <ul>
+              <li>React</li>
+              <li>Redux</li>
+              <li>Next.js</li>
+            </ul>
+          </li>
+          <li>
+            <h3>Tests</h3>
+            <ul>
+              <li>Jest</li>
+              <li>Cypress</li>
+              <li>React Testing Library</li>
+            </ul>
+          </li>
+          <li>
+            <h3>Back-End</h3>
+            <ul>
+              <li>Node.js </li>
+              <li>Express</li>
+              <li>ApolloServer (GraphQL)</li></ul>
+          </li>
+          <li >
+            <h3>Stockage de données</h3>
+            <ul>
+              <li>MongoDB</li>
+              <li>MySQL</li>
+              <li>Redis</li>
+            </ul>
+          </li>
+          <li >
+            <h3>Infra et DevOps</h3>
+            <ul>
+              <li>GitLab CI/CD</li>
+              <li>GitHub Actions</li>
+              <li>AWS EC2</li>
+              <li>AWS S3</li>
+              <li>AWS CloudFormation</li>
+            </ul>
+          </li>
+          <li >
+            <h3>Méthodologie</h3>
+            <ul>
+              <li>scrum</li>
+              <li>agile</li>
+              <li>tdd</li></ul>
+          </li>
+        </ul>
+      </section>
+      <section id="prices" class="container">
+        <h2 >Mes tarifs</h2>
+      </section>
+      <section id="contact" class="container">
+        <h2 >Me contacter</h2>
+        <button type="button" id="contact-me" class="btn">M'écrire un email</button>
+      </section>
+    </main>
+    <footer>
+      <div>
+        <p >Gary Sauvage ® - Site fait avec <i id="love" class="fa-solid fa-heart"></i> à Paris</p>
+        <p>Powered by <a href="https://fontawesome.com/">Font Awesome's</a> <i id="love" class="fa-solid fa-font-awesome"></i> awesome icon fonts</p>
+        <button  id="to-top" class="hidden"></button>
+      </div>
+    </footer>
+  </body>
+</html>
