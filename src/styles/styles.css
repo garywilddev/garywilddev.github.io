@@ -289,7 +289,7 @@ header {
 #navContainer {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   top: var(--space-0);
   background-color: var(--color-bg-surface) !important;
   transition: all var(--transition-duration-default);
@@ -356,11 +356,7 @@ nav > ul > li:hover {
   display: inline-block;
 }
 
-#navBrand {
-  display: flex;
-}
-
-#navBrand #info {
+#info {
   padding-top: var(--space-150);
   display: flex;
   flex-wrap: wrap;
@@ -370,19 +366,17 @@ nav > ul > li:hover {
   visibility: hidden;
 }
 
-#navBrand #info.show {
+#info.show {
   visibility: visible;
 }
 
-#navBrand p {
+#info p
+{
   width: var(--width-element-full);
   text-align: center;
 }
 
 #logo {
-  position: absolute;
-  top: var(--height-element-0);
-  left: var(--width-element-0);
   flex-basis: var(--width-element-100);
   flex-grow: 0;
   flex-shrink: 0;
@@ -410,9 +404,8 @@ a.active #logo{
 @media screen and (max-width: 767px) {
   /* from https://jonsuh.com/hamburgers/ */
   .burger {
-    position: absolute;
-    top: 0;
-    right: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
     z-index: var(--z-index-2);
     display: flex;
     justify-content: center;
