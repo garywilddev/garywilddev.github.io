@@ -403,6 +403,12 @@ a.active #logo{
 
 @media screen and (max-width: 767px) {
   /* from https://jonsuh.com/hamburgers/ */
+  #burger-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .burger {
     flex-grow: 0;
     flex-shrink: 0;
@@ -420,6 +426,7 @@ a.active #logo{
     background: var(--color-bg-fill-emphasis);
     border-radius: var(--radius-border-full);
     cursor: pointer;
+    border: none;
   }
 
   .burger-box {
