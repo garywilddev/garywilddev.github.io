@@ -927,7 +927,6 @@ footer p {
 }
 
 #to-top.show {
-  display: none;
   animation-name: appear-below;
   animation-duration: var(--transition-duration-default);
   display: block;
