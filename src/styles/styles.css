@@ -335,80 +335,108 @@ body {
 header {
   position: sticky;
   top: 0px;
+  background-color: var(--color-bg-surface);
 }
 
 #navContainer {
+  margin: var(--space-0) auto;
+  width: fit-content;
   display: flex;
-  justify-content: center;
-  align-items: start;
-  top: var(--space-0);
+  justify-content: space-between;
+  align-items: center;
   background-color: var(--color-bg-surface) !important;
   transition: all var(--transition-duration-default);
 }
 
-header > nav {
+#main-nav {
   width: var(--width-element-full);
-  background-color: var(--color-bg-surface);
-  text-decoration: none;
 }
 
-header nav a.active {
-  color: var(--color-accent-main);
-  text-decoration: underline;
-}
-
-header nav a {
-  font-size: var(--text-heading-sm-font-size);
-}
-
-header nav a:link {
-  text-decoration: none;
+#main-nav a {
   color: var(--color-text-link-main);
+  display: block;
+  font-size: var(--text-heading-sm-font-size);
+  transition: all 0.2s;
+  font-weight: 700;
+  position: relative;
+  text-decoration: none;
+  z-index: 0;
 }
 
-/*header nav a:visited {
+/*#main-nav a:link {
+text-decoration: none;
+color: var(--color-text-link-main);
+}*/
+
+/*#main-nav a:visited {
 text-decoration: none;
 color: var(--color-text-link-visited);
 }*/
 
-header nav a:hover {
-  text-decoration: none;
-  color: var(--color-text-link-hover);
-  border: solid var(--color-border-link-hover) var(--width-border-200);
-  border-radius: var(--radius-border-150);
-  background-color: var(--color-bg-link-hover);
+#main-nav a::before {
+  background: var(--color-bg-fill-emphasis);
+  bottom: 0.25em;
+  content: "";
+  position: absolute;
+  bottom: -0.4em;
+  height: 0.25em;
+  left: 10%;
+  opacity: 0;
+  right: 90%;
+  transition: all .275s;
 }
 
-header nav a:focus {
+
+#main-nav a:hover, #main-nav a:focus-visible {
+  transform: scale(1.1);
+  transition: all .275s;
   text-decoration: none;
-  color: var(--color-text-link-focus);
-  border: solid var(--color-border-link-hover) var(--width-border-200);
-  border-radius: var(--radius-border-150);
-  background-color: var(--color-bg-link-focus);
 }
 
-header nav a:active {
-  text-decoration: none;
-  color: var(--color-text-link-active);
-  background-color: var(--color-bg-link-active);
+#main-nav a:hover::before, #main-nav a:focus-visible::before  {
+  opacity: 1;
+  right: 10%;
 }
+
+
+#main-nav a.current-menu-item::before {
+  opacity: 1;
+  right: 10%;
+  transition: all .175s;
+}
+
+#main-nav a.current-menu-item:hover::before, #main-nav a.current-menu-item:focus-visible::before  {
+  background: black;
+}
+
+#main-nav a:focus{
+  text-decoration: none;
+}
+
+#main-nav a:focus:not(:focus-visible) {
+  outline: 0;
+}
+
+#main-nav a:focus-visible {
+  outline: solid var(--color-border-link-hover) var(--width-border-200);
+}
+
 
 ul {
   list-style-type: none;
   padding-inline-start: unset;
 }
 
-nav > ul > li {
+#main-nav > ul > li {
   text-align: center;
   display: inline-block;
 }
 
-nav > ul > li:hover {
+#main-nav > ul > li:hover {
   display: inline-block;
 }
 
 #info {
-  padding-top: var(--space-150);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -421,18 +449,23 @@ nav > ul > li:hover {
   visibility: visible;
 }
 
+#info h1 {
+  margin: var(--space-0);
+}
+
 #info p
 {
+  margin: var(--space-0);
   width: var(--width-element-full);
   text-align: center;
 }
 
 #logo {
-  flex-basis: var(--width-element-100);
+  flex-basis: var(--width-element-075);
   flex-grow: 0;
   flex-shrink: 0;
-  height: var(--height-element-100);
-  width: var(--width-element-100);
+  height: var(--height-element-075);
+  width: var(--width-element-075);
   text-align: center;
   display: flex;
   justify-content: center;
@@ -440,37 +473,53 @@ nav > ul > li:hover {
   background-color: var(--color-white);
   border-radius: var(--radius-border-full);
   cursor: pointer;
-  margin: var(--space-400);
+  margin: var(--space-100);
 }
 
-a.active #logo{
-  background-color: var(--color-accent-main);
-}
+/*a.current-menu-item#logo{
+background-color: var(--color-accent-main);
+}*/
 
 #menu-list {
   display: flex;
   justify-content: space-around;
 }
 
+#burger-container {
+  display: none;
+}
+
 @media screen and (max-width: 767px) {
+  #navContainer {
+    align-items: flex-start;
+  }
+
   /* from https://jonsuh.com/hamburgers/ */
+#logo {
+    flex-basis: var(--width-element-100);
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: var(--width-element-100);
+    height: var(--height-element-100);
+    margin: var(--space-400);
+}
+
   #burger-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-basis: var(--width-element-100);
+    flex-grow: 0;
+    flex-shrink: 0;
   }
 
   .burger {
-    flex-grow: 0;
-    flex-shrink: 0;
     z-index: var(--z-index-2);
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: visible;
-    margin: 0;
     padding: var(--space-200);
-    cursor: pointer;
     width: var(--width-element-100);
     height: var(--height-element-100);
     margin: var(--space-400);
@@ -585,6 +634,7 @@ a.active #logo{
   }
 
   #main-nav.is-open::before {
+    background-color: var(--color-bg-surface-alt);
     transform: translate(-50vh, 50vh) scale(100);
     transition-duration: var(--transition-duration-slow);
   }
@@ -646,9 +696,9 @@ a.active #logo{
     font-weight: var(--text-heading-md-font-weight);
   }
 
-  #menu-list a.active {
-    color: var(--color-accent-main);
-  }
+  /*#menu-list a.current-menu-item {
+  color: var(--color-accent-main);
+  }*/
 }
 /********* End Header *********/
 
@@ -672,10 +722,23 @@ section {
 }
 
 #brand {
-  background-color: var(--color-bg-surface);
+  background-color: var(--color-transparent);
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+#brand::before{
+  z-index: -1;
+  content: '';
+  opacity: .5;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url('../assets/images/bike.jpeg');
+  background-repeat: no-repeat;
+  background-position: center;
+
 }
 
 #brand > h1 {
