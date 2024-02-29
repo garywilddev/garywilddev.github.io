@@ -20,10 +20,10 @@ document.addEventListener("DOMContentLoaded", () => {
     elements.forEach((element) => {
       const href = element.getAttribute("href") 
       if(href === `#${val}`) {
-        element?.classList.add("active")
+        element?.classList.add("current-menu-item")
 
       }else {
-        element?.classList.remove("active")
+        element?.classList.remove("current-menu-item")
       }
     })
   })
@@ -33,7 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
     entries.forEach((entry) => {
       if(entry.isIntersecting) {
         const id = entry.target.getAttribute("id");
-        console.log({ id })
         state.currentSection = id
 
         const element = document.querySelector("#info")

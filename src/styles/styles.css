@@ -491,7 +491,7 @@ a.active #logo{
     transition-duration: .2s;
   }
 
-  .burger-inner, .burger-inner:after, .burger-inner:before {
+  .burger-inner, .burger-inner:after, .burger-inner::before {
     position: absolute;
     width: var(--width-element-050);
     height: var(--width-border-400);
@@ -504,7 +504,7 @@ a.active #logo{
     display: block;
   }
 
-  .burger-inner:before {
+  .burger-inner::before {
     top: calc(-1 * (var(--height-element-050) / 4));
   }
 
@@ -512,18 +512,18 @@ a.active #logo{
     top: calc(1 * var(--height-element-050) / 4);
   }
 
-  .burger-inner:after, .burger-inner:before {
+  .burger-inner:after, .burger-inner::before {
     display: block;
     content: "";
   }
 
-  .burger--vortex .burger-inner:after, .burger--vortex .burger-inner:before {
+  .burger--vortex .burger-inner:after, .burger--vortex .burger-inner::before {
     transition-delay: .1s;
     transition-timing-function: linear;
     transition-duration: 0s;
   }
 
-  .burger--vortex .burger-inner:before {
+  .burger--vortex .burger-inner::before {
     transition-property: top;
   }
 
@@ -537,7 +537,7 @@ a.active #logo{
     transform: rotate(765deg);
   }
 
-  .burger--vortex.is-open .burger-inner:before {
+  .burger--vortex.is-open .burger-inner::before {
     top: 0;
   }
 
