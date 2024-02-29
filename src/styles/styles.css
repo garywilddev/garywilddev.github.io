@@ -716,7 +716,7 @@ section {
   clear: both;
   display: flex !important;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   min-height:var(--height-element-full-screen);
 }
