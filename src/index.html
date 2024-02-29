@@ -28,35 +28,47 @@
             crossorigin="anonymous"></script>-->
     <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src="./scripts/behaviour.js"></script>
-    <header >
+    <header>
       <div id="navContainer">
-        <i  class="fa-heart fa-solid" id="logo"></i>
-        <div id="info">
-          <h1>Gary Sauvage</h1>
-          <p>Developpeur Front-End Freelance</p>
-        </div>
-        <div id="burger-container">
+        <button id="logo" type="button" aria-label="Main" aria-controls="navigation">
+          <i  class="fa-user fa-solid" ></i>
+        </button>
+      <div id="info">
+        <h1>Gary Sauvage</h1>
+        <p>Developpeur Front-End Freelance</p>
+      </div>
+      <div id="burger-container">
         <button class="burger burger--vortex" type="button" aria-label="Menu" aria-controls="navigation">
           <div class="burger-box">
             <div class="burger-inner"></div>
           </div>
         </button>
         <div>MENU</div>
-</div>
-        <nav id="main-nav">
-          <ul id="menu-list">
-            <li><a href="#whoami">Qui suis-je ?</a></li>
-            <li><a href="#experience">Mon expertise</a></li>
-            <li><a href="#prices">Mes tarifs</a></li>
-            <li><a href="#contact">Me contacter</a></li>
-          </ul>
-        </nav>
+      </div>
+      <nav id="main-nav">
+        <ul id="menu-list">
+          <li><a href="#whoami">Qui suis-je ?</a></li>
+          <li><a href="#experience">Mon expertise</a></li>
+          <li><a href="#prices">Mes tarifs</a></li>
+          <li><a href="#contact">Me contacter</a></li>
+        </ul>
+      </nav>
       </div>
     </header>
     <main >
       <section id="brand">
         <h1>Gary Sauvage</h1>
-        <p>Developpeur Front-End Freelance</p>
+        <div id="passionate">
+          <div>Je suis un </div>
+          <ul id="passionate-list">
+            <li>Ingénieur</li>
+            <li>Développeur Full Stack</li>
+            <li>Probleme solver</li>
+            <li>Sportif</li>
+            <li>Cycliste</li>
+          </ul>
+          <div> passionné</div>
+        </div>
         <p class="warning"><i class="fa-solid fa-bell"></i> WEB SITE UNDER CONSTRUCTION <i class="fa-solid fa-hourglass-half"></i></p>
       </section>
       <section id="whoami" class="container">
@@ -78,7 +90,7 @@
         Approche Orientée Utilisateur : Je m'efforce constamment de créer des interfaces intuitives et agréables, mettant l'utilisateur final au centre de mes préoccupations.
         <br/>
         Adaptabilité Agile : Mon expérience dans des environnements agiles a cultivé ma capacité à collaborer efficacement au sein d'équipes multidisciplinaires.</p>
-        <ul >
+        <ul>
           <li>
             <h3>Front-End</h3>
             <ul>
