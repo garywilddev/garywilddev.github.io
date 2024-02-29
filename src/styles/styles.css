@@ -823,6 +823,17 @@ section > h2 {
   text-align: center;
 }
 
+#whoami-content {
+  display: flex;
+  gap: var(--space-400) ;
+  justify-content: space-between;
+}
+
+#whoami-content > p {
+  text-align: justify;
+}
+
+
 #experience > ul > li {
   margin: var(--space-075);
   border: solid  var(--width-border-100) var(--color-text-on-bg);
