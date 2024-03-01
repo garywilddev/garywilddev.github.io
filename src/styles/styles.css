@@ -863,51 +863,85 @@ section > h2 {
   border-radius: var(--radius-border-800);
 }
 
+#contact-content {
+  justify-self: stretch;
+  display: flex;
+  flex-grow: 2;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
 #contact-me:active {
   background-color: var(--color-bg-fill-emphasis-active);
 }
 
 #contact-me {
+  height: var(--height-element-100);
+  width: var(--width-element-300);
   color: var(--color-text-on-fill-emphasis);
   background-color: var(--color-bg-fill-emphasis);
-  border: solid var(--color-border-fill-emphasis) var(--width-border-fill-emphasis);
+  border:none;
   border-radius: var(--radius-border-full);
   font-size: var(--text-body-lg-font-size);
   font-weight: var(--text-body-lg-font-weight);
-  overflow: hidden;
   padding: var(--space-100) var(--space-200);
   text-decoration: none;
-  transition: var(--transition-duration-default) ease-in-out;
+  cursor: pointer;
 }
 
 #contact-me::after {
-  background-color: var(--color-bg-fill-emphasis-hover);
-  content: '';
-  border-radius: var(--radius-border-full);
-  display: block;
   height: var(--height-element-100);
   width: var(--width-element-300);
+  border-radius: var(--radius-border-full);
   padding: var(--space-100) var(--space-200);
-  position: absolute;
-  transform: translate(calc(-1 * var(--width-element-300)), 0);
-  transition: transform var(--transition-duration-default) ease-out;
-  z-index: -1;
-  visibility: hidden;
 }
 
 #contact-me:hover::after {
+  transform: translate(0px, calc(-1 * (var(--height-element-100) - var(--space-200) ))) scale(120%) ;
+}
+
+.hover-effect {
+  /*overflow: hidden;*/
+  transition: var(--transition-duration-default) ease-in-out;
+}
+
+.hover-effect::after {
+  content: '';
+  background-color: var(--color-bg-fill-emphasis-hover);
+  display: block;
+  position: absolute;
+  transform: translate(-100%, 0);
+  transition: transform var(--transition-duration-default) ease-out;
+  /*z-index: -1;
+  visibility: hidden;*/
+}
+
+.hover-effect:hover {
+  border-radius: var(--radius-border-full);
+  color: var(--color-text-on-fill-emphasis);
+  transform: scale(110%);
+}
+
+.hover-effect:hover::after {
   visibility: visible;
-  transform: translate(0px,calc(-1 * (var(--height-element-100) - var(--space-200) ))) scale(120%) ;
   transition: transform var(--transition-duration-default) ease-out;
   will-change: transform;
 }
 
-#contact-me:hover {
-  border: solid var(--color-border-fill-emphasis-hover) var(--width-border-fill-emphasis-hover);
-  border-radius: var(--radius-border-full);
-  color: var(--color-text-on-fill-emphasis);
-  transform: scale(105%);
+
+.site-logo {
+  display: block;
+  font-size: var(--font-size-300);
+  color: var(--color-accent-main);
+  transition: var(--transition-duration-default) ease-in-out;
+  cursor: pointer;
 }
+
+.site-logo:hover {
+  color: var(--color-bg-fill-emphasis-hover);
+  transform: scale(110%);
+}
+
 /********* End Sections *********/
 
 
@@ -947,6 +981,7 @@ footer p {
   background-position: 50% 50%;
   background-color: var(--color-accent-main);
   border-radius: var(--radius-border-full);
+  cursor: pointer;
 }
 
 #to-top.show {
