@@ -32,13 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
       if (entry.isIntersecting) {
         const id = entry.target.getAttribute("id");
         state.currentSection = id;
-
-        const element = document.querySelector("#info");
-        if (id !== "brand") {
-          element.classList.add("show");
-        } else {
-          element.classList.remove("show");
-        }
       }
     });
   };
@@ -84,7 +77,7 @@ $(() => {
     $('a[href^="#"').each((_, a) => {
       $(a).on("click", (e) => {
         e.preventDefault();
-        const navContainerHeight = $("#navContainer").outerHeight(
+        const navContainerHeight = $("#header-content").outerHeight(
           true /*include margin*/
         );
         const top = $(`${$(a).attr("href")}`).offset().top;
