@@ -131,6 +131,10 @@
 --color-accent-deep: var(--color-foobar-800);
 --color-accent-deepest: var(--color-foobar-900);
 
+/* shadows */
+--shadow-100: 0px 1px 0px 0px rgba(26, 26, 26, 0.07);
+--shadow-500: 0px 12px 20px -8px rgba(26, 26, 26, 0.24);
+
 /* dimensions */
 --space-0: 0rem;
 --space-025: 0.125rem;
@@ -272,6 +276,8 @@
 --color-bg-surface-alt: var(--color-primary-subduedest);
 
 --color-text-hero: var(--color-white);
+--color-text-title: var(--color-primary-deepest);
+--color-text-emphasis: var(--color-accent-main);
 --color-text-emphasis: var(--color-accent-main);
 --color-bg-fill-emphasis: var(--color-accent-main);
 
@@ -312,6 +318,7 @@ html,
 ol,
 p,
 ul {
+  font-size: var(--text-body-sm-font-size);
   text-align: center;
   list-style: none;
   margin: 0;
@@ -335,12 +342,9 @@ body {
   min-width: 300px;
 }
 
-#profile-picture {
-  display: block;
-  max-width: var(--width-element-500);
-  max-height: var(--height-element-500);
-  width: auto;
-  height: auto;
+
+grid-container {
+  display: grid;
 }
 
 .container {
@@ -351,9 +355,7 @@ body {
 /********* Begin Header *********/
 header {
   position: fixed;
-  height: fit-content;
-  width: var(--width-element-full);
-  top: 0px;
+  top: var(--space-0);
   background-color: var(--color-bg-surface);
   z-index: var(--z-index-6);
 }
@@ -363,8 +365,13 @@ header {
   max-width: 80%;
 }
 
-.grid-cols-5 {
+.grid-container {
   display: grid;
+  justify-content: stretch;
+  width: 100vw
+}
+
+.grid-cols-5 {
   grid-template-columns: repeat(5, minmax(50px, 1fr));
   grid-auto-flow: column;
   justify-items: center;
@@ -384,8 +391,8 @@ header {
 }
 
 .grid-cols-5 #info-content {
-  grid-column: 2 / span 4;
   display: grid;
+  grid-column: 2 / span 4;
   grid-template-columns: subgrid;
   align-items: center;
   justify-self: stretch;
@@ -520,6 +527,7 @@ header {
 @media screen and (max-width: 768px) {
   /* from https://jonsuh.com/hamburgers/ */
   #burger-container {
+    grid-column: 4 / span 1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -893,36 +901,69 @@ section {
   animation-delay: 8s;
 }
 
-section > h2 {
+section  h1 {
   font-size: var(--text-heading-lg-font-size);
   color: var(--color-text-emphasis);
   text-align: center;
 }
-
-#whoami-content {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-400);
-  justify-content: center;
+section  h2 {
+  font-size: var(--text-heading-md-font-size);
+  color: var(--color-text-title);
+  text-align: center;
+}
+section  h3 {
+  font-size: var(--text-heading-sm-font-size);
+  color: var(--color-text-emphasis);
+  text-align: center;
 }
 
-#whoami-content > p {
+#profile-picture {
+  display: block;
+  max-width: var(--width-element-500);
+  max-height: var(--height-element-500);
+  width: auto;
+  height: auto;
+  margin: var(--space-100);
+  float: left;
+}
+
+#hello-world-content > p {
   text-align: justify;
 }
 
-.grid-container {
-  display: grid;
+
+#skills > ul {
+  /*grid-template-columns: repeat(1, minmax(100px, 1fr));*/
+  gap: var(--space-075);
 }
 
-.grid-cols-2 {
-  grid-template-columns: repeat(3, minmax(100px, 1fr));
+@media screen and (min-width: 576px) {
+  #skills > ul {
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+  }
 }
 
-#experience > ul > li {
-  margin: var(--space-075);
-  border: solid var(--width-border-100) var(--color-text-on-bg);
+#skills > ul > li {
+  background-color: var(--color-bg-surface);
+  padding: var(--space-075);
   border-radius: var(--radius-border-800);
+  box-shadow: var(--shadow-500);
 }
+
+#skills i {
+  color: var(--color-text-emphasis);
+  line-height: 0px;
+}
+
+.skill-header {
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-075);
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+
 
 #contact-content {
   justify-self: stretch;

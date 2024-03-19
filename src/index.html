@@ -37,8 +37,13 @@
       href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=M+PLUS+1+Code:wght@100..700&family=Manrope:wght@200..800&family=Maven+Pro:wght@400..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
       integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -56,7 +61,7 @@
     <script src="./scripts/behaviour.js"></script>
     <script src="./scripts/custom-player.js"></script>
     <header>
-      <div id="header-content" class="grid-cols-5">
+      <div id="header-content" class="grid-container grid-cols-5">
         <button
           id="logo"
           type="button"
@@ -90,7 +95,7 @@
             <div id="effect-container">
               <ul id="nav-list">
                 <li><a href="#whoami">Qui suis-je ?</a></li>
-                <li><a href="#experience">Mon expertise</a></li>
+                <li><a href="#experience">Mes expériences</a></li>
                 <li><a href="#contact">Me contacter</a></li>
               </ul>
             </div>
@@ -145,107 +150,139 @@
         </div>
       </section>
       <section id="whoami" class="container">
-        <h2>Qui suis-je ?</h2>
-        <div id="whoami-content">
-          <img
-            id="profile-picture"
-            class="img-fluid"
-            src="./assets/images/photo_whole_low-resolution.jpg"
-            alt="My profile picture"
-          />
-          <p id="description">
-            Je suis un développeur depuis plus de 10 ans dont 6 ans dans le
-            developpement d'applications web. Après quelques années dans
-            l'industrie à me frotter à des technologies et des pratiques de
-            développement pour client lourd, j'ai succombé aux sirènes du client
-            léger et en particulier du développement web. Depuis 2017, j'ai
-            accompagné en tant que salarié 2 startups - la première dans la
-            logistique et la seconde dans la e-Santé - à développer et maintenir
-            des applications web complexes à destinations de clients exigeants.
-            Soucieux de la qualité et de la maintenabilité des produits fini,
-            j'aime placer les bonnes pratiques d'architecture et de
-            développement au centre de métier. Friand d'aventures,
-            d'apprentissage et de nouvelles expériences, c'est aujourd'hui en
-            tant que freelance que je mets mon expertise à votre service.
+        <h1>Qui suis-je ?</h1>
+        <article id="hello-word">
+          <h2>Hello There</h2>
+          <div id="hello-world-content">
+            <img
+              id="profile-picture"
+              class="img-fluid"
+              src="./assets/images/photo_whole_low-resolution.jpg"
+              alt="My profile picture"
+            />
+            <p id="description">
+              Je suis un développeur depuis plus de 10 ans dont 6 ans dans le
+              developpement d'applications web. Après quelques années dans
+              l'industrie à me frotter à des technologies et des pratiques de
+              développement pour client lourd, j'ai succombé aux sirènes du
+              client léger et en particulier du développement web. Depuis 2017,
+              j'ai accompagné en tant que salarié 2 startups - la première dans
+              la logistique et la seconde dans la e-Santé - à développer et
+              maintenir des applications web complexes à destinations de clients
+              exigeants. Soucieux de la qualité et de la maintenabilité des
+              produits fini, j'aime placer les bonnes pratiques d'architecture
+              et de développement au centre de métier. Friand d'aventures,
+              d'apprentissage et de nouvelles expériences, c'est aujourd'hui en
+              tant que freelance que je mets mon expertise à votre service.
+            </p>
+          </div>
+        </article>
+        <article id="skills">
+          <h2>Mon expertise</h2>
+          <!--<p>
+            Maîtrise des Langages : Expert en HTML, CSS et JavaScript, j'ai
+            affiné mes compétences au fil des ans pour rester à la pointe des
+            technologies émergentes.
           </p>
-        </div>
+          <p>
+            Frameworks Front-End : Mon expertise s'étend à l'utilisation de
+            frameworks tels que React, Angular et Vue.js, me permettant de
+            développer des applications web robustes et évolutives.
+          </p>
+          <p>
+            Approche Orientée Utilisateur : Je m'efforce constamment de créer
+            des interfaces intuitives et agréables, mettant l'utilisateur final
+            au centre de mes préoccupations.
+          </p>
+          <p>
+            Adaptabilité Agile : Mon expérience dans des environnements agiles a
+            cultivé ma capacité à collaborer efficacement au sein d'équipes
+            multidisciplinaires.
+          </p>-->
+          <ul class="grid-container">
+            <li data-aos="fade-down-right" data-aos-anchor="#skills">
+              <div class="skill-header">
+                <i class="fa-solid fa-code"></i>
+                <h3>Front-End</h3>
+              </div>
+              <ul>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Redux</li>
+                <li>Next.js</li>
+              </ul>
+            </li>
+            <li data-aos="zoom-in" data-aos-anchor="#skills">
+              <div class="skill-header">
+                <i class="fa-solid fa-vials"></i>
+                <h3>Tests</h3>
+              </div>
+              <ul>
+                <li>Jest</li>
+                <li>Cypress</li>
+                <li>React Testing Library</li>
+              </ul>
+            </li>
+            <li data-aos="fade-down-left" data-aos-anchor="#skills">
+              <div class="skill-header">
+                <i class="fa-solid fa-server"></i>
+                <h3>Back-End</h3>
+              </div>
+              <ul>
+                <li>Node.js</li>
+                <li>Express</li>
+                <li>ApolloServer (GraphQL)</li>
+              </ul>
+            </li>
+            <li data-aos="fade-up-right" data-aos-anchor="#skills">
+              <div class="skill-header">
+                <i class="fa-solid fa-database"></i>
+                <h3>Stockage de données</h3>
+              </div>
+              <ul>
+                <li>MongoDB</li>
+                <li>MySQL</li>
+                <li>Redis</li>
+              </ul>
+            </li>
+            <li data-aos="zoom-out" data-aos-anchor="#skills">
+              <div class="skill-header">
+                <i class="fa-solid fa-network-wired"></i>
+                <h3>Infra et DevOps</h3>
+              </div>
+              <ul>
+                <li>GitLab CI/CD</li>
+                <li>GitHub Actions</li>
+                <li>AWS EC2</li>
+                <li>AWS S3</li>
+                <li>AWS CloudFormation</li>
+              </ul>
+            </li>
+            <li data-aos="fade-up-left" data-aos-anchor="#skills">
+              <div class="skill-header">
+                <i class="fa-solid fa-compass"></i>
+                <h3>Méthodologie</h3>
+              </div>
+              <ul>
+                <li>scrum</li>
+                <li>agile</li>
+                <li>tdd</li>
+              </ul>
+            </li>
+          </ul>
+        </article>
       </section>
       <section id="experience" class="container">
-        <h2>Mon expertise</h2>
-        <p>
-          Compétences Clés :
-          <br />
-          Maîtrise des Langages : Expert en HTML, CSS et JavaScript, j'ai affiné
-          mes compétences au fil des ans pour rester à la pointe des
-          technologies émergentes.
-          <br />
-          Frameworks Front-End : Mon expertise s'étend à l'utilisation de
-          frameworks tels que React, Angular et Vue.js, me permettant de
-          développer des applications web robustes et évolutives.
-          <br />
-          Approche Orientée Utilisateur : Je m'efforce constamment de créer des
-          interfaces intuitives et agréables, mettant l'utilisateur final au
-          centre de mes préoccupations.
-          <br />
-          Adaptabilité Agile : Mon expérience dans des environnements agiles a
-          cultivé ma capacité à collaborer efficacement au sein d'équipes
-          multidisciplinaires.
-        </p>
+        <h1>Mes expériences</h1>
         <ul>
-          <li>
-            <h3>Front-End</h3>
-            <ul>
-              <li>React</li>
-              <li>Redux</li>
-              <li>Next.js</li>
-            </ul>
-          </li>
-          <li>
-            <h3>Tests</h3>
-            <ul>
-              <li>Jest</li>
-              <li>Cypress</li>
-              <li>React Testing Library</li>
-            </ul>
-          </li>
-          <li>
-            <h3>Back-End</h3>
-            <ul>
-              <li>Node.js</li>
-              <li>Express</li>
-              <li>ApolloServer (GraphQL)</li>
-            </ul>
-          </li>
-          <li>
-            <h3>Stockage de données</h3>
-            <ul>
-              <li>MongoDB</li>
-              <li>MySQL</li>
-              <li>Redis</li>
-            </ul>
-          </li>
-          <li>
-            <h3>Infra et DevOps</h3>
-            <ul>
-              <li>GitLab CI/CD</li>
-              <li>GitHub Actions</li>
-              <li>AWS EC2</li>
-              <li>AWS S3</li>
-              <li>AWS CloudFormation</li>
-            </ul>
-          </li>
-          <li>
-            <h3>Méthodologie</h3>
-            <ul>
-              <li>scrum</li>
-              <li>agile</li>
-              <li>tdd</li>
-            </ul>
-          </li>
+          <li>MBDA</li>
+          <li>Safran</li>
+          <li>Wing</li>
+          <li>Posos</li>
         </ul>
       </section>
       <section id="contact" class="container">
-        <h2>Me contacter</h2>
+        <h1>Me contacter</h1>
         <div id="contact-content">
           <button type="button" id="contact-me" class="hover-effect btn">
             M'écrire un email
