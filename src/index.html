@@ -54,6 +54,7 @@
             crossorigin="anonymous"></script>-->
     <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src="./scripts/behaviour.js"></script>
+    <script src="./scripts/custom-player.js"></script>
     <header>
       <div id="header-content" class="grid-cols-5">
         <button
@@ -99,19 +100,30 @@
     </header>
     <main>
       <section id="hero">
-        <video
-          autoplay=""
-          loop=""
-          muted=""
-          playsinline=""
-          class="bg-video-cover"
-        >
-          <source src="./assets/videos/swell.mp4" type="video/mp4" />
-          <img
-            src="/images/hero-placeholder.jpg"
-            alt="Background image of clouds"
-          />
-        </video>
+        <div id="hero-player">
+          <video
+            id="hero-video"
+            autoplay=""
+            loop=""
+            muted=""
+            playsinline=""
+            class="bg-video-cover"
+            controls
+          >
+            <source src="/src/assets/videos/swell.mp4" type="video/mp4" />
+            <img
+              src="/src/assets/images/hero-placeholder-1.png"
+              alt="Background image of clouds"
+            />
+          </video>
+          <div class="controls">
+            <button
+              id="play"
+              class="fa-solid fa-circle-play"
+              aria-label="play pause toggle"
+            ></button>
+          </div>
+        </div>
         <div id="hero-container">
           <div id="hero-content">
             <h1>Gary Sauvage</h1>

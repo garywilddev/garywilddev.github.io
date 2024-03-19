@@ -745,6 +745,45 @@ section {
   align-items: center;
 }
 
+.controls {
+  z-index: var(--z-index-1);
+  visibility: hidden;
+  opacity: 0.5;
+  position: absolute;
+  bottom: var(--space-100);
+  left: var(--space-100);
+  transition: 1s all;
+  display: flex;
+}
+
+#hero-player {
+  width: var(--width-element-full);
+  height: var(--height-element-full);
+}
+
+#hero-player button {
+  border: none;
+  background-color: transparent;
+}
+
+#hero-player button:before {
+  font-size: var(--text-body-lg-font-size);
+  position: relative;
+  color: #aaa;
+  text-shadow: 1px 1px 0px black;
+}
+
+
+
+#hero-player:hover .controls,
+#hero-player:focus-within .controls {
+  opacity: 1;
+}
+
+.controls .hidden {
+  display: none;
+}
+
 #hero-container {
   height: 100%;
   width: 100%;
@@ -937,6 +976,7 @@ section > h2 {
   background-color: var(--color-bg-fill-emphasis-hover);
   display: block;
   position: absolute;
+  top: var(--space-0);
   transform: translate(-100%, 0);
   transition: transform var(--transition-duration-default) ease-out;
   z-index: -1;
