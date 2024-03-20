@@ -7,13 +7,14 @@ $(() => {
 
     $(window).on("scroll", (e) => {
       const value = window.scrollY;
-      controls.css(
-        "transform",
-        `matrix(1, 0, 0, 1, ${1 * value * 0.7}, ${-1 * value * 0.4})`
-      );
+      const scaleFactor = value * 0.05;
+      const tx = ((1 * scaleFactor) / 100) * player.width();
+      const ty = ((-1 * scaleFactor) / 100) * player.height();
+
+      controls.css("transform", `matrix(1, 0, 0, 1, ${tx}, ${ty})`);
 
       if (value > 0) {
-        player.css("clip-path", `inset(${value * 0.05}% round 8.62200px`);
+        player.css("clip-path", `inset(${scaleFactor}% round 8.62200px`);
       } else {
         player.css("clip-path", "");
       }
