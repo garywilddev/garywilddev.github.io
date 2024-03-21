@@ -745,7 +745,6 @@ section {
 
 #hero {
   position: relative;
-  height: 100vh;
   margin: 0;
   padding: 0;
   background-color: var(--color-transparent);
@@ -768,7 +767,6 @@ section {
 #hero-player {
   position: relative;
   width: var(--width-element-full);
-  height: var(--height-element-full);
 }
 
 #hero-player button {
@@ -780,8 +778,7 @@ section {
 #hero-player button:before {
   font-size: var(--text-body-lg-font-size);
   position: relative;
-  color: #aaa;
-  text-shadow: 1px 1px 0px black;
+  color: var(--color-bg-surface-alt);
 }
 
 #hero-player:hover .controls,
@@ -795,8 +792,8 @@ section {
 
 #hero-veil {
   z-index: 100;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   top:0px;
   position: absolute;
   display: flex;
