@@ -985,7 +985,6 @@ section  h3 {
 #contact-me {
   max-height: var(--height-element-200);
   color: var(--color-text-on-fill-emphasis);
-  background-color: var(--color-bg-fill-emphasis);
   border: none;
   border-radius: var(--radius-border-full);
   font-size: var(--text-body-lg-font-size);
@@ -995,55 +994,23 @@ section  h3 {
   cursor: pointer;
 }
 
-#contact-me::after {
-  display: block;
-  position: absolute;
-  width: var(--width-element-300);
-  height: var(--height-element-100);
-  border-radius: var(--radius-border-full);
-  padding: var(--space-100) var(--space-200);
-}
-
-#contact-me:hover::after {
-  transform: translate(
-  calc(-2 * var(--space-100)),
-  calc(-1 * (var(--height-element-100)))
-  )
-  scale(110%);
-}
-
 .hover-effect {
   overflow: hidden;
+  color: var(--color-text-emphasis);
+  background-color: var(--color-bg-fill-emphasis);
   transition: var(--transition-duration-default) ease-in-out;
-}
-
-.hover-effect::after {
-  content: "";
-  background-color: var(--color-bg-fill-emphasis-hover);
-  display: block;
-  position: absolute;
-  top: var(--space-0);
-  transform: translate(-100%, 0);
-  transition: transform var(--transition-duration-default) ease-out;
-  z-index: -1;
 }
 
 .hover-effect:hover {
   border-radius: var(--radius-border-full);
-  color: var(--color-text-on-fill-emphasis);
+  background-color: var(--color-bg-fill-emphasis-hover);
   transform: scale(110%);
-}
-
-.hover-effect:hover::after {
-  visibility: visible;
-  transition: transform var(--transition-duration-default) ease-out;
-  will-change: transform;
 }
 
 .site-logo {
   display: block;
   font-size: var(--font-size-300);
-  color: var(--color-text-emphasis);
+  color: var(--color-bg-fill-emphasis);
   transition: var(--transition-duration-default) ease-in-out;
   cursor: pointer;
 }
