@@ -6,7 +6,6 @@ $(() => {
 
     const player = $("#hero-player");
     const controls = $("#hero-player .controls");
-    const container = $("#hero-container");
 
     const startEffectYPosition = 0; // start effect at the top of the page
     const endEffectYPosition = 14 / SCALE_FACTOR; // end effect when inset scale reaches 14%
@@ -32,7 +31,7 @@ $(() => {
     }
 
     let lastScrollTop = 0;
-    $(window).on("scroll", (e) => {
+    $(window).on("scroll", () => {
       //translate controls as the window is scrolled
       const value = window.scrollY;
 

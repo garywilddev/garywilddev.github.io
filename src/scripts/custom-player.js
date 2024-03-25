@@ -4,7 +4,6 @@ $(() => {
     const controls = $("#hero-player .controls");
 
     const play = $("#play");
-    const stop = $("#stop");
     media.removeAttr("controls");
     controls.css("visibility", "visible");
 

@@ -3,7 +3,7 @@ function selectCurrentSection() {
   // select current section based on intersection when scrolling
   const state = {
     _value: "",
-    _listener: function (val) {},
+    _listener: function () {},
     set currentSection(val) {
       this._value = val;
       this._listener(val);
@@ -85,12 +85,12 @@ function toTop() {
   });
 
   // Behaviour of To-Top button
-  $("#to-top").on("click", (e) => {
+  $("#to-top").on("click", () => {
     $("html,body").animate({ scrollTop: 0 }, 500);
   });
 
   //Show To-Top button when scrolling
-  $(window).on("scroll", (e) => {
+  $(window).on("scroll", () => {
     const navBarYPostion = $("header").position().top;
     const element = $("#to-top");
 
@@ -109,7 +109,7 @@ function navBar() {
   $(".burger").on("click", function () {
     $(this).toggleClass("is-open");
     $("#main-nav").toggleClass("is-open");
-    $("li").on("click", (e) => {
+    $("li").on("click", () => {
       $("#main-nav").removeClass("is-open");
       $(".burger").removeClass("is-open");
     });
