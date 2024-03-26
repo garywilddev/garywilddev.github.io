@@ -66,9 +66,7 @@ function translateMainFooter() {
   const main = $("main").first();
   const footer = $("footer").first();
 
-  [main, footer].map((e) =>
-    e.css("transform", `translate(0, ${header.height()}px)`)
-  );
+  [main, footer].map((e) => e.css("marginTop", `${header.height()}px`));
   /* END TRANSLATE-MAIN-FOOTER */
 }
 
@@ -91,12 +89,12 @@ function toTop() {
 
   //Show To-Top button when scrolling
   $(window).on("scroll", () => {
-    const navBarYPostion = $("header").position().top;
+    const value = window.scrollY;
     const element = $("#to-top");
 
-    if (!element.hasClass("show") && navBarYPostion > 0) {
+    if (!element.hasClass("show") && value > 0) {
       element.addClass("show");
-    } else if (navBarYPostion === 0) {
+    } else if (value === 0) {
       element.removeClass("show");
     }
   });
