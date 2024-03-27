@@ -307,6 +307,10 @@
   line-height: 1.5;
 }
 
+html {
+  font-size: var(--text-body-sm-font-size);
+}
+
 body,
 h1,
 h2,
@@ -314,11 +318,10 @@ h3,
 h4,
 h5,
 h6,
-html,
 ol,
 p,
 ul {
-  font-size: var(--text-body-sm-font-size);
+  font-size: var(--text-body-md-font-size);
   text-align: center;
   list-style: none;
   margin: 0;
@@ -340,10 +343,6 @@ body {
   scroll-behavior: smooth;
   background-color: var(--color-bg);
   min-width: 300px;
-}
-
-grid-container {
-  display: grid;
 }
 
 .container {
@@ -936,7 +935,6 @@ section h3 {
 }
 
 #skills > ul {
-  /*grid-template-columns: repeat(1, minmax(100px, 1fr));*/
   gap: var(--space-075);
 }
 
@@ -964,6 +962,123 @@ section h3 {
   gap: var(--space-075);
   display: flex;
   flex-wrap: nowrap;
+}
+
+.grid-container.experience-list {
+  grid-template-columns: repeat(5, minmax(100px, 1fr));
+}
+
+.experience-item {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / span 5;
+  justify-content: center;
+  align-items: stretch;
+  gap: var(--space-300);
+}
+
+.experience-item-decorator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary-deepest);
+}
+
+.border {
+  margin: 0 auto;
+  border-right: solid var(--color-primary-deepest) 1px;
+}
+
+.experience-item-content ul {
+  list-style: square;
+}
+
+.experience-item ul > li {
+  margin-left: var(--space-500);
+}
+
+ul.multi-exp,
+ul.tech-env {
+  list-style: none;
+}
+
+ul.tech-env > li,
+ul.multi-exp > li {
+  margin-left: 0px;
+}
+
+ul.multi-exp > li:not(:first-child) {
+  margin-top: var(--space-300);
+}
+
+ul.tech-env {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-050);
+}
+
+ul.tech-env li {
+  border-radius: var(--radius-border-300);
+  background-color: var(--color-bg-fill-emphasis);
+  padding: var(--space-075);
+  color: var(--color-text-on-surface);
+}
+
+/*#posos {
+  background-image: url("/src/assets/images/posos-logo.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#wing {
+  background-image: url("/src/assets/images/wing-logo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#safran {
+  background-image: url("/src/assets/images/safran-id-security-logo.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#mbda {
+  background-image: url("/src/assets/images/mbda-logo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}*/
+
+.experience-item p {
+  text-align: left;
+}
+
+.experience-item:not(:first-child) .experience-item-content {
+  margin-top: var(--space-300);
+}
+
+.experience-item:first-child > .experience-item-decorator {
+  justify-content: flex-end;
+}
+
+.experience-item:last-child > .experience-item-decorator {
+  justify-content: flex-start;
+}
+
+.experience-item-content {
+  padding: var(--space-300);
+  grid-column: 2 / span 3;
+  border-radius: var(--radius-border-600);
+  background-color: var(--color-bg-surface-alt);
+  box-shadow: var(--shadow-500);
+}
+
+.line {
+  display: flex;
+  height: 50%;
 }
 
 #contact-content {
