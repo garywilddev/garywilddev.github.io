@@ -386,6 +386,7 @@ header {
   border: none;
   cursor: pointer;
   margin: var(--top-mobile-button-margin);
+  font-size: var(--text-heading-lg-font-size);
 }
 
 .grid-cols-5 #info-content {
