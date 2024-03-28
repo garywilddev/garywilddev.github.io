@@ -214,6 +214,7 @@
   --font-size-100: 1rem;
   --font-size-125: 1.25rem;
   --font-size-150: 1.5rem;
+  --font-size-200: 2rem;
   --font-size-300: 3rem;
   --font-size-400: 4rem;
   --font-size-500: 5rem;
@@ -247,9 +248,9 @@
   --text-heading-2xl-font-size: var(--font-size-500);
   --text-heading-xl-font-size: var(--font-size-400);
   --text-heading-lg-font-size: var(--font-size-300);
-  --text-heading-md-font-size: var(--font-size-150);
-  --text-heading-sm-font-size: var(--font-size-125);
-  --text-heading-xs-font-size: var(--font-size-100);
+  --text-heading-md-font-size: var(--font-size-200);
+  --text-heading-sm-font-size: var(--font-size-150);
+  --text-heading-xs-font-size: var(--font-size-125);
   --text-body-lg-font-size: var(--font-size-150);
   --text-body-md-font-size: var(--font-size-125);
   --text-body-sm-font-size: var(--font-size-100);
@@ -1083,11 +1084,11 @@ ul.tech-env li {
 }
 
 #contact-content {
-  justify-self: stretch;
   display: flex;
-  flex-grow: 2;
+  flex-grow: 1;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: var(--space-1000);
 }
 
 #contact-me:active {
@@ -1099,7 +1100,7 @@ ul.tech-env li {
   color: var(--color-text-on-fill-emphasis);
   border: none;
   border-radius: var(--radius-border-full);
-  font-size: var(--text-body-lg-font-size);
+  font-size: var(--text-heading-md-font-size);
   font-weight: var(--text-body-lg-font-weight);
   padding: var(--space-100) var(--space-200);
   text-decoration: none;
@@ -1110,13 +1111,18 @@ ul.tech-env li {
   overflow: hidden;
   color: var(--color-text-emphasis);
   background-color: var(--color-bg-fill-emphasis);
-  transition: var(--transition-duration-default) ease-in-out;
 }
 
 .hover-effect:hover {
   border-radius: var(--radius-border-full);
   background-color: var(--color-bg-fill-emphasis-hover);
-  transform: scale(110%);
+  animation: fa-beat 1s infinite ease-in-out;
+}
+
+#site-list {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-100);
 }
 
 .site-logo {
