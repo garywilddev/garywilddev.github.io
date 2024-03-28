@@ -2,14 +2,18 @@ function selectCurrentSection() {
   /* BEGIN SELECT-CURRENT-SECTION */
   // select current section based on intersection when scrolling
   const state = {
-    _value: "",
+    _values: [],
     _listener: function () {},
-    set currentSection(val) {
-      this._value = val;
+    push(val) {
+      this._values.push(val);
       this._listener(val);
     },
-    get currentSection() {
-      return this._value;
+    pop(val) {
+      this._values = this._values.filter((el) => el != val);
+      this._listener(this._values[this._values.length - 1]);
+    },
+    current() {
+      return this._values[this._values.length - 1];
     },
     registerListener: function (listener) {
       this._listener = listener;
@@ -33,13 +37,20 @@ function selectCurrentSection() {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         const id = entry.target.getAttribute("id");
-        state.currentSection = id;
+        state.push(id);
+      } else {
+        const id = entry.target.getAttribute("id");
+        state.pop(id);
       }
     });
   };
 
+  const header = $("header").first();
+
   let observer = new IntersectionObserver(callback, {
-    threshold: [0.2, 0.8],
+    root: null,
+    rootMargin: `-${header.height()}px 0px 0px 0px`,
+    threshold: [0.05],
   });
 
   const targetSections = document.querySelectorAll("section");
