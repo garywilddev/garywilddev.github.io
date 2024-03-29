@@ -71,14 +71,14 @@ function resizeHero() {
   /* END RESIZE-HERO */
 }
 
-function translateMainFooter() {
-  /* BEGIN TRANSLATE-MAIN-FOOTER */
+function translateMain() {
+  /* BEGIN TRANSLATE-MAIN */
   const header = $("header").first();
   const main = $("main").first();
   const footer = $("footer").first();
 
-  [main, footer].map((e) => e.css("marginTop", `${header.height()}px`));
-  /* END TRANSLATE-MAIN-FOOTER */
+  main.css("marginTop", `${header.height()}px`);
+  /* END TRANSLATE-MAIN */
 }
 
 function toTop() {
@@ -142,7 +142,7 @@ function navBar() {
 $(() => {
   $(document).ready(function () {
     selectCurrentSection();
-    translateMainFooter();
+    translateMain();
     toTop();
     navBar();
     resizeHero();
