@@ -1137,7 +1137,7 @@ ul.tech-env li {
   flex-grow: 1;
   flex-direction: column;
   justify-content: center;
-  gap: var(--space-1000);
+  gap: var(--space-500);
 }
 
 #contact-me:active {
@@ -1154,6 +1154,11 @@ ul.tech-env li {
   padding: var(--space-100) var(--space-200);
   text-decoration: none;
   cursor: pointer;
+}
+
+#contact-me a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .hover-effect {
