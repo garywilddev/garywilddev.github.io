@@ -869,6 +869,7 @@ section {
 }
 
 #passionate {
+  margin-top: var(--space-400);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -880,17 +881,13 @@ section {
   text-wrap: nowrap;
 }
 
-#passionate-list {
+#passionate-list  {
   min-width: 200px;
   position: relative;
   display: flex;
   height: 2em;
   align-items: center;
   justify-content: center;
-  color: var(--color-text-emphasis);
-  font-family: var(--font-family-hero);
-  font-size: var(--text-body-lg-font-size);
-  font-weight: var(--font-weight-bold);
 }
 
 @media screen and (min-width: 554px) {
@@ -992,6 +989,11 @@ section h3 {
 
 .grid-container.experience-list {
   grid-template-columns: repeat(3, minmax(100px, 1fr));
+}
+
+#experience img {
+  width: 80%;
+  height: auto;
 }
 
 .experience-item {
@@ -1103,30 +1105,6 @@ ul.tech-env li {
   padding: var(--space-075);
   color: var(--color-text-on-surface);
 }
-
-/*#posos {
-  background-image: url("/src/assets/images/posos-logo.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#wing {
-  background-image: url("/src/assets/images/wing-logo.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#safran {
-  background-image: url("/src/assets/images/safran-id-security-logo.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#mbda {
-  background-image: url("/src/assets/images/mbda-logo.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-}*/
 
 #contact {
   min-height: 100%;
