@@ -32,29 +32,10 @@
   --z-index-6: 514;
 
   /* color palette */
-  --color-alpaca-900: #29527a;
-  --color-alpaca-800: #34719d;
-  --color-alpaca-700: #3982b1;
-  --color-alpaca-600: #4194c4;
-  --color-alpaca-500: #47a1d2;
-  --color-alpaca-400: #53afd8;
-  --color-alpaca-300: #67bcde;
-  --color-alpaca-200: #8bcfe8;
-  --color-alpaca-100: #b7e2f1;
-  --color-alpaca-050: #e2f4fa;
 
-  --color-foobar-900: #890073;
-  --color-foobar-800: #b3007d;
-  --color-foobar-700: #ca0082;
-  --color-foobar-600: #e10089;
-  --color-foobar-500: #f4008d;
-  --color-foobar-400: #f00ba4;
-  --color-foobar-300: #ef52b7;
-  --color-foobar-200: #ef89cd;
-  --color-foobar-100: #f3b8e1;
-  --color-foobar-050: #fae3f3;
+  --linear-gradient: linear-gradient(180deg, #e9414e7f, #000000bf);
 
-  /*--color-alpaca-900: #005141;
+  --color-alpaca-900: #005141;
   --color-alpaca-800: #006d5d;
   --color-alpaca-700: #007d6b;
   --color-alpaca-600: #008d7b;
@@ -75,7 +56,6 @@
   --color-foobar-200: #e59aa3;
   --color-foobar-100: #f7cdd6;
   --color-foobar-050: #fbebf0;
-   */
 
   --color-accord-900: #007400;
   --color-accord-800: #0d9717;
@@ -114,8 +94,6 @@
   --color-black: #000000;
   /*--color-black: #4d4d4d;*/
   --color-transparent: transparent;
-
-  --linear-gradient: linear-gradient(180deg, #e100897f, #000000bf);
 
   /* primitive tokens */
   /** primary */
@@ -205,9 +183,9 @@
   --width-element-full: 100%;
   --width-element-full-screen: 100vw;
 
+  --font-family-cursive: "Delicious Handrawn", cursive;
   --font-family-sans: "Assistant", "Manrope", "Maven Pro", "Poppins",
     "Source Sans Pro", "Arial", sans-serif;
-  --font-family-hero: "M PLUS 1 Code", sans-serif;
   --font-weight-regular: 400;
   --font-weight-medium: 550;
   --font-weight-semibold: 650;
@@ -258,6 +236,7 @@
   --text-body-md-font-size: var(--font-size-125);
   --text-body-sm-font-size: var(--font-size-100);
   --text-body-xs-font-size: var(--font-size-075);
+  --text-emphasis-font-family: var(--font-family-cursive);
 
   /** background */
   --color-bg: var(--color-white);
@@ -348,6 +327,12 @@ body {
   min-width: 300px;
 }
 
+.emphasis-text {
+  font-family: var(--text-emphasis-font-family);
+  color: var(--color-text-emphasis);
+  font-size: var(--text-heading-lg-font-size);
+  /*font-weight: var(--font-weight-bold);*/
+}
 .container {
   box-sizing: border-box;
   background-color: var(--color-bg);
@@ -869,10 +854,19 @@ section {
 }
 
 #passionate {
+  margin-top: var(--space-400);
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+}
+
+@media screen and (min-width: 554px) {
+  #passionate {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 #passionate p {
@@ -884,13 +878,9 @@ section {
   min-width: 200px;
   position: relative;
   display: flex;
-  height: 2em;
   align-items: center;
   justify-content: center;
-  color: var(--color-text-emphasis);
-  font-family: var(--font-family-hero);
-  font-size: var(--text-body-lg-font-size);
-  font-weight: var(--font-weight-bold);
+  height: var(--height-element-300);
 }
 
 @media screen and (min-width: 554px) {
@@ -992,6 +982,11 @@ section h3 {
 
 .grid-container.experience-list {
   grid-template-columns: repeat(3, minmax(100px, 1fr));
+}
+
+#experience img {
+  width: 80%;
+  height: auto;
 }
 
 .experience-item {
@@ -1103,30 +1098,6 @@ ul.tech-env li {
   padding: var(--space-075);
   color: var(--color-text-on-surface);
 }
-
-/*#posos {
-  background-image: url("/src/assets/images/posos-logo.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#wing {
-  background-image: url("/src/assets/images/wing-logo.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#safran {
-  background-image: url("/src/assets/images/safran-id-security-logo.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#mbda {
-  background-image: url("/src/assets/images/mbda-logo.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-}*/
 
 #contact {
   min-height: 100%;
