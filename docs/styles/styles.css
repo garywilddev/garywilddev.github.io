@@ -376,6 +376,7 @@ header {
   display: flex;
   align-items: center;
 }
+
 #logo img {
   max-height: var(--height-element-100);
   height: auto;
