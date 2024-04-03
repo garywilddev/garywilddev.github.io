@@ -278,8 +278,8 @@
 
   /** Highly Contextual tokens **/
   --top-mobile-button-margin: var(--space-200);
-  --top-mobile-button-height: var(--height-element-100);
-  --top-mobile-button-width: var(--width-element-100);
+  --top-mobile-button-height: var(--height-element-075);
+  --top-mobile-button-width: var(--width-element-075);
   /********* End Design-System *********/
 }
 
@@ -348,7 +348,7 @@ header {
 
 #header-content {
   margin: 0 auto;
-  max-width: 80%;
+  max-width: 90%;
 }
 
 .grid-container {
@@ -372,29 +372,28 @@ header {
   background-color: unset;
   border: none;
   cursor: pointer;
-  margin: var(--top-mobile-button-margin);
   font-size: var(--text-heading-md-font-size);
+  display: flex;
+  align-items: center;
+}
+#logo img {
+  max-height: var(--height-element-100);
+  height: auto;
+  width: auto;
+  border-radius: var(--radius-border-full);
 }
 
 .grid-cols-5 #info-content {
   display: grid;
-  grid-column: 2 / span 4;
+  grid-column: 1 / span 4;
   grid-template-columns: subgrid;
-  align-items: center;
-  justify-self: stretch;
-}
-
-.grid-cols-5 #info {
-  grid-column: 1 / span 3;
 }
 
 @media screen and (min-width: 768px) {
   .grid-cols-5 #info-content {
-    grid-column: 2 / span 3;
     display: flex;
-    flex-direction: column;
-    justify-self: stretch;
-    align-items: stretch;
+    grid-column: 1 / span 2;
+    justify-self: flex-start;
   }
 }
 
@@ -403,8 +402,9 @@ header {
   gap: var(--space-075);
   flex-wrap: wrap;
   justify-content: center;
-  align-items: baseline;
+  align-items: center;
   color: var(--color-black);
+  grid-column: 2 / span 3;
 }
 
 #info h1 {
@@ -419,7 +419,15 @@ header {
 
 #main-nav {
   display: flex;
+  align-items: center;
   justify-content: center;
+  grid-column: 5 / span 1;
+}
+
+@media screen and (min-width: 768px) {
+  #main-nav {
+    grid-column: 3 / span 3;
+  }
 }
 
 #main-nav a {
@@ -1101,12 +1109,18 @@ ul.tech-env li {
   min-height: 100%;
 }
 
+#contact img {
+  display: block;
+  max-width: 33%;
+}
+
 #contact-content {
   display: flex;
   flex-grow: 1;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
-  gap: var(--space-500);
+  gap: var(--space-200);
 }
 
 #contact-me:active {
@@ -1185,8 +1199,8 @@ footer p {
 }
 
 #to-top {
-  height: var(--height-element-100);
-  width: var(--width-element-100);
+  height: var(--height-element-075);
+  width: var(--width-element-075);
   border: none;
   transition: transform var(--transition-duration-default) ease-out;
   display: none;
