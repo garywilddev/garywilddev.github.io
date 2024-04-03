@@ -9,7 +9,7 @@
     <meta name="author" content="Gary Sauvage" />
     <meta property="og:title" content="My presentation" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="logo.png" />
+    <meta property="og:image" content="favicon.ico" />
     <meta property="og:url" content="https://garysauvage.com/" />
     <meta
       property="og:description"
@@ -30,14 +30,14 @@
       href="./assets/fonts/fontawesome-free-6.5.1-web/css/solid.min.css"
       rel="stylesheet"
     />
-    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Manrope:wght@200..800&family=Maven+Pro:wght@400..900&family=Delicious+Handrawn&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Just+Another+Hand&family=M+PLUS+Code+Latin:wght@100..700&family=Assistant:wght@200..800&family=Manrope:wght@200..800&family=Maven+Pro:wght@400..900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
   </head>
   <body>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
@@ -54,50 +54,47 @@
       integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
       crossorigin="anonymous"
     ></script>
-    <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
-      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-            crossorigin="anonymous"></script>-->
     <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src="./scripts/behaviour.js"></script>
     <script src="./scripts/custom-player.js"></script>
     <script src="./scripts/scroll.js"></script>
     <header>
       <div id="header-content" class="grid-container grid-cols-5">
-        <button
-          id="logo"
-          type="button"
-          aria-label="Main"
-          aria-controls="navigation"
-        >
-          <i class="fa-solid fa-house"></i>
-        </button>
         <div id="info-content">
+          <button
+            id="logo"
+            type="button"
+            aria-label="Main"
+            aria-controls="navigation"
+          >
+            <img src="./assets/images/logo.svg" alt="logo" />
+          </button>
           <div id="info">
             <h1>Gary</h1>
             <p>Développeur Web Full Stack</p>
           </div>
-          <nav id="main-nav">
-            <div id="burger-container">
-              <button
-                class="burger burger--vortex"
-                type="button"
-                aria-label="Menu"
-                aria-controls="navigation"
-              >
-                <div class="burger-box">
-                  <div class="burger-inner"></div>
-                </div>
-              </button>
-            </div>
-            <div id="effect-container">
-              <ul id="nav-list">
-                <li><a href="#whoami">Qui suis-je ?</a></li>
-                <li><a href="#experience">Mes expériences</a></li>
-                <li><a href="#contact">Me contacter</a></li>
-              </ul>
-            </div>
-          </nav>
         </div>
+        <nav id="main-nav">
+          <div id="burger-container">
+            <button
+              class="burger burger--vortex"
+              type="button"
+              aria-label="Menu"
+              aria-controls="navigation"
+            >
+              <div class="burger-box">
+                <div class="burger-inner"></div>
+              </div>
+            </button>
+          </div>
+          <div id="effect-container">
+            <ul id="nav-list">
+              <li><a href="#whoami">Qui suis-je ?</a></li>
+              <li><a href="#experience">Mes expériences</a></li>
+              <li><a href="#contact">Me contacter</a></li>
+            </ul>
+          </div>
+        </nav>
       </div>
     </header>
     <main>
@@ -134,7 +131,7 @@
               <p>Je suis un</p>
               <ul id="passionate-list">
                 <li class="emphasis-text">ingénieur</li>
-                <li class="emphasis-text">développeur full stack</li>
+                <li class="emphasis-text">développeur</li>
                 <li class="emphasis-text">grimpeur</li>
                 <li class="emphasis-text">cycliste</li>
               </ul>
@@ -669,10 +666,11 @@
       <section id="contact" class="container">
         <h1>Me contacter</h1>
         <article id="contact-content">
+          <img src="./assets/images/photo-rounded.svg" alt="profile picture" />
           <p>
-            Donner
-            <span class="emphasis-text">&lt;corps/&gt;</span> à vos
-            idées les plus ambitieuses
+            Donnez
+            <span class="emphasis-text">&lt;corps/&gt;</span> à vos idées les
+            plus ambitieuses
           </p>
           <button type="button" id="contact-me" class="hover-effect btn">
             <a href="mailto:contact@garysauvage.com"> M'écrire un email </a>
@@ -698,17 +696,15 @@
       </section>
     </main>
     <footer>
-      <div>
-        <p>
-          Gary Sauvage ® - Site fait avec
-          <i id="love" class="fa-solid fa-heart"></i> à Paris
-        </p>
-        <p>
-          Powered by <a href="https://fontawesome.com/">Font Awesome's</a>
-          <i id="love" class="fa-solid fa-font-awesome"></i> awesome icon fonts
-        </p>
-        <button id="to-top"></button>
-      </div>
+      <p>
+        Gary Sauvage ® - Site fait avec
+        <i id="love" class="fa-solid fa-heart"></i> à Paris
+      </p>
+      <p>
+        Powered by <a href="https://fontawesome.com/">Font Awesome's</a>
+        <i id="love" class="fa-solid fa-font-awesome"></i> awesome icon fonts
+      </p>
+      <button id="to-top"></button>
     </footer>
   </body>
 </html>
