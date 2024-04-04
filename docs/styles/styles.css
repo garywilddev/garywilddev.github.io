@@ -1106,6 +1106,12 @@ ul.tech-env li {
   color: var(--color-text-on-surface);
 }
 
+#projects .miniatures-container > img {
+  max-width: var(--width-element-800);
+  height: auto;
+  width: auto;
+}
+
 #contact {
   min-height: 100%;
 }
