@@ -77,24 +77,53 @@
     />
     <link rel="stylesheet" href="./styles/styles.css" />
     <link
+      rel="preload"
       href="./assets/fonts/fontawesome-free-6.5.1-web/css/fontawesome.min.css"
-      rel="stylesheet"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="./assets/fonts/fontawesome-free-6.5.1-web/css/fontawesome.min.css"
+    /></noscript>
     <link
+      rel="preload"
       href="./assets/fonts/fontawesome-free-6.5.1-web/css/brands.min.css"
-      rel="stylesheet"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="./assets/fonts/fontawesome-free-6.5.1-web/css/brands.min.css"
+    /></noscript>
     <link
+      rel="preload"
       href="./assets/fonts/fontawesome-free-6.5.1-web/css/solid.min.css"
-      rel="stylesheet"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="./assets/fonts/fontawesome-free-6.5.1-web/css/solid.min.css"
+    /></noscript>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Just+Another+Hand&family=M+PLUS+Code+Latin:wght@100..700&family=Assistant:wght@200..800&family=Manrope:wght@200..800&family=Maven+Pro:wght@400..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link
+      rel="preload"
+      href="https://unpkg.com/aos@next/dist/aos.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript
+      ><link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"
+    /></noscript>
     <link
       rel="shortcut icon"
       type="image/x-icon"
@@ -127,28 +156,23 @@
       AOS.init();
     </script>
     <script
-      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
       crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     ></script>
     <script
       src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
       integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
       crossorigin="anonymous"
     ></script>
-    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src="./scripts/behaviour.js"></script>
     <script src="./scripts/custom-player.js"></script>
     <script src="./scripts/scroll.js"></script>
     <header>
       <div id="header-content" class="grid-container grid-cols-5">
         <div id="info-content">
-          <button
-            id="logo"
-            type="button"
-            aria-label="Main"
-            aria-controls="navigation"
-          >
+          <button id="logo" type="button" aria-label="Main">
             <img src="./assets/images/logo.svg" alt="logo" />
           </button>
           <div id="info">
@@ -171,10 +195,28 @@
           </div>
           <div id="effect-container">
             <ul id="nav-list">
-              <li><a href="#whoami">Qui suis-je ?</a></li>
-              <li><a href="#experience">Mes expériences</a></li>
-              <li><a href="#projects">Mes Projets</a></li>
-              <li><a href="#contact">Me contacter</a></li>
+              <li>
+                <a href="#whoami" aria-label="En savoir plus sur moi"
+                  >Qui suis-je ?</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#experience"
+                  aria-label="En savoir plus sur mon expérience"
+                  >Mon expérience</a
+                >
+              </li>
+              <li>
+                <a href="#projects" aria-label="En savoir plus sur mes projets"
+                  >Mes Projets</a
+                >
+              </li>
+              <li>
+                <a href="#contact" aria-label="Comment me contacter"
+                  >Me contacter</a
+                >
+              </li>
             </ul>
           </div>
         </nav>
@@ -351,7 +393,7 @@
         </article>
       </section>
       <section id="experience" class="viewport-content container">
-        <h1>Mes expériences</h1>
+        <h1>Mon expérience</h1>
         <article>
           <ul class="experience-list grid-container">
             <li class="experience-item">
@@ -373,7 +415,7 @@
                 </p>
                 <ul class="multi-exp">
                   <li>
-                    <h3>Lead Développeur Front-End</h3>
+                    <h2>Lead Développeur Front-End</h2>
                     <p>Dec. 2022 - Sept. 2023</p>
                     <p>Lead d'une équipe de 3 développeurs front-end</p>
                     <ul>
@@ -425,7 +467,7 @@
                     </ul>
                   </li>
                   <li>
-                    <h3>Développeur Front-End</h3>
+                    <h2>Développeur Front-End</h2>
                     <p>Dec. 2020 - Dec. 2022</p>
                     <p>Collaboration avec le CTO et 2-3 prestataires</p>
                     <ul>
@@ -499,7 +541,7 @@
                 </p>
                 <ul class="multi-exp">
                   <li>
-                    <h3>Développeur Full Stack</h3>
+                    <h2>Développeur Full Stack</h2>
                     <p>Oct. 2018 - Sept. 2020</p>
                     <p>
                       Membre d'une équipe de 3 personnes qui représentait la
@@ -579,7 +621,7 @@
                     </ul>
                   </li>
                   <li>
-                    <h3>Développeur Back-End</h3>
+                    <h2>Développeur Back-End</h2>
                     <p>Sept. 2017 - Oct. 2018</p>
                     <ul>
                       <li>
@@ -637,7 +679,7 @@
                   institutions financières, des e-administrations et des
                   sociétés de jeu en ligne
                 </p>
-                <h3>Ingénieur Logiciel</h3>
+                <h2>Ingénieur Logiciel</h2>
                 <p>
                   Travail sur une suite de 3 logiciels pour la signature (dictao
                   signature server, d2s), la validation de signature (dictao
@@ -718,7 +760,7 @@
               </div>
               <div id="mbda" class="experience-item-content">
                 <img src="./assets/images/mbda-logo.svg" alt="mbda logo" />
-                <h3>Ingénieur Logiciel</h3>
+                <h2>Ingénieur Logiciel</h2>
                 <ul>
                   <li>
                     <p>
@@ -750,21 +792,37 @@
         <h1>Mes Projets</h1>
         <ul>
           <li>
-            <a href="https://movie-explorer-gold.vercel.app/"
+            <a
+              href="https://movie-explorer-gold.vercel.app/"
+              aria-label="Naviguer vers le projet bibliothèque de films"
               >Une interface web pour une bibliothèque de films</a
             >
             <div class="miniatures-container">
-              <img src="./assets/images/preview-movies-explorer-1.png" />
-              <img src="./assets/images/preview-movies-explorer-2.png" />
-              <img src="./assets/images/preview-movies-explorer-3.png" />
+              <img
+                src="./assets/images/preview-movies-explorer-1.png"
+                alt="apperçu 1 du projet bibliothèque de film"
+              />
+              <img
+                src="./assets/images/preview-movies-explorer-2.png"
+                alt="apperçu 2 du projet bibliothèque de film"
+              />
+              <img
+                src="./assets/images/preview-movies-explorer-3.png"
+                alt="apperçu 3 du projet bibliothèque de film"
+              />
             </div>
           </li>
           <li>
-            <a href="https://bouncing-balls-react-js.vercel.app/"
+            <a
+              href="https://bouncing-balls-react-js.vercel.app/"
+              aria-label="Naviguer vers le projet système de collisions de particules"
               >Un système de collisions de particules</a
             >
             <div class="miniatures-container">
-              <img src="./assets/images/preview-colliding-particles.png" />
+              <img
+                src="./assets/images/preview-colliding-particles.png"
+                alt="apperçu du projet système de collisions de particules"
+              />
             </div>
           </li>
         </ul>
@@ -779,21 +837,32 @@
             plus ambitieuses
           </p>
           <button type="button" id="contact-me" class="hover-effect btn">
-            <a href="mailto:contact@garysauvage.com"> M'écrire un email </a>
+            <a
+              href="mailto:contact@garysauvage.com"
+              aria-label="M'écrire un email"
+            >
+              M'écrire un email
+            </a>
           </button>
           <ul id="site-list">
             <li>
-              <a href="https://www.linkedin.com/in/gary-sauvage-70b95468/"
+              <a
+                href="https://www.linkedin.com/in/gary-sauvage-70b95468/"
+                aria-label="Consulter mon profil sur LinkedIn"
                 ><i class="site-logo fa-brands fa-linkedin"></i
               ></a>
             </li>
             <li>
-              <a href="https://github.com/garywilddev"
+              <a
+                href="https://github.com/garywilddev"
+                aria-label="Consulter mon profil sur GitHub"
                 ><i class="site-logo fa-brands fa-github"></i
               ></a>
             </li>
             <li>
-              <a href="https://stackoverflow.com/users/7505477/gary-wild"
+              <a
+                href="https://stackoverflow.com/users/7505477/gary-wild"
+                aria-label="Consulter mon profil sur StackOverflow"
                 ><i class="site-logo fa-brands fa-stack-overflow"></i
               ></a>
             </li>
@@ -807,7 +876,12 @@
         <i id="love" class="fa-solid fa-heart"></i> à Paris
       </p>
       <p>
-        Powered by <a href="https://fontawesome.com/">Font Awesome's</a>
+        Powered by
+        <a
+          href="https://fontawesome.com/"
+          aria-label="Naviguer vers le site de Font Awesome"
+          >Font Awesome's</a
+        >
         <i id="love" class="fa-solid fa-font-awesome"></i> awesome icon fonts
       </p>
       <button id="to-top"></button>

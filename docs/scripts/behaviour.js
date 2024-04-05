@@ -140,11 +140,9 @@ function navBar() {
 }
 
 $(() => {
-  $(document).ready(function () {
-    selectCurrentSection();
-    translateMain();
-    toTop();
-    navBar();
-    resizeHero();
-  });
+  selectCurrentSection();
+  translateMain();
+  toTop();
+  navBar();
+  resizeHero();
 });
