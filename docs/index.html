@@ -105,13 +105,21 @@
     <script type="application/ld+json">
       {
         "@context": "http://schema.org",
-        "@type": "Brand",
         "@id": "https://www.garysauvage.com/",
+        "@type": "WebPage",
+        "author": {
+          "@type": "Person",
+          "name": "Gary Sauvage"
+        },
         "name": "Gary Sauvage: Développeur Web Freelance",
         "description": "Développeur web indépendant avec plus de 10 ans d'expérience dans la tech.",
         "url": "https://www.garysauvage.com/",
-        "mainEntityOfPage": "https://www.garysauvage.com/",
-        "image": "https://www.garysauvage.com/assets/images/thumbnail.png"
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://www.garysauvage.com/assets/images/thumbnail.png",
+          "height": 600,
+          "width": 600
+        }
       }
     </script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
