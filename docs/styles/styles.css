@@ -1107,7 +1107,7 @@ ul.tech-env li {
 }
 
 #projects .miniatures-container > img {
-  max-width: var(--width-element-800);
+  max-width: 80%;
   height: auto;
   width: auto;
 }
