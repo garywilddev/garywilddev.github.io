@@ -120,22 +120,91 @@
     /></noscript>
     <script type="application/ld+json">
       {
-        "@context": "http://schema.org",
-        "@id": "https://www.garysauvage.com/",
-        "@type": "WebPage",
-        "author": {
-          "@type": "Person",
-          "name": "Gary Sauvage"
-        },
-        "name": "Gary Sauvage: Développeur Web Freelance",
-        "description": "Développeur web indépendant avec plus de 10 ans d'expérience dans la tech.",
-        "url": "https://www.garysauvage.com/",
-        "image": {
-          "@type": "ImageObject",
-          "url": "https://www.garysauvage.com/assets/images/thumbnail.png",
-          "height": 600,
-          "width": 600
-        }
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": "https://www.garysauvage.com/",
+            "url": "https://www.garysauvage.com/",
+            "name": "Gary Sauvage: Développeur Web Freelance",
+            "isPartOf": { "@id": "https://www.garysauvage.com/#website" },
+            "about": {
+              "@id": "https://www.garysauvage.com/#/schema/person/27d6f585c40996e1347d99ebf5d0dbd7363a23b8"
+            },
+            "primaryImageOfPage": {
+              "@id": "https://www.garysauvage.com/#primaryimage"
+            },
+            "image": { "@id": "https://www.garysauvage.com/#primaryimage" },
+            "thumbnailUrl": "https://www.garysauvage.com/assets/images/thumbnail.png",
+            "datePublished": "2024-04-07T17:59:20+00:00",
+            "dateModified": "2024-04-07T17:59:20+00:00",
+            "description": "Développeur web indépendant avec plus de 10 ans d'expérience dans la tech.",
+            "breadcrumb": { "@id": "https://www.garysauvage.com/#breadcrumb" },
+            "inLanguage": "fr-FR",
+            "potentialAction": [
+              {
+                "@type": "ReadAction",
+                "target": ["https://www.garysauvage.com/"]
+              }
+            ]
+          },
+          {
+            "@type": "ImageObject",
+            "inLanguage": "fr-FR",
+            "@id": "https://www.garysauvage.com/#primaryimage",
+            "url": "https://www.garysauvage.com/assets/images/thumbnail.png",
+            "contentUrl": "https://www.garysauvage.com/assets/images/thumbnail.png",
+            "height": 600,
+            "width": 600
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.garysauvage.com/#breadcrumb",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Accueil" }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://www.garysauvage.com/#website",
+            "url": "https://www.garysauvage.com/",
+            "name": "Gary Sauvage: Développeur Web Freelance",
+            "description": "Développeur web indépendant avec plus de 10 ans d'expérience dans la tech.",
+            "publisher": {
+              "@id": "https://www.garysauvage.com/#/schema/person/27d6f585c40996e1347d99ebf5d0dbd7363a23b8"
+            },
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://www.garysauvage.com/?s={search_term_string}"
+                },
+                "query-input": "required name=search_term_string"
+              }
+            ],
+            "inLanguage": "fr-FR"
+          },
+          {
+            "@type": ["Person", "Organization"],
+            "@id": "https://www.garysauvage.com/#/schema/person/27d6f585c40996e1347d99ebf5d0dbd7363a23b8",
+            "name": "Gary Sauvage",
+            "image": {
+              "@type": "ImageObject",
+              "inLanguage": "fr-FR",
+              "@id": "https://www.garysauvage.com/#/schema/person/image/",
+              "url": "https://www.garysauvage.com/assets/images/thumbnail.png",
+              "contentUrl": "https://www.garysauvage.com/assets/images/thumbnail.png",
+              "height": 600,
+              "width": 600,
+              "caption": "Gary Sauvage"
+            },
+            "logo": {
+              "@id": "https://www.garysauvage.com/#/schema/person/image/"
+            },
+            "sameAs": ["https://www.garysauvage.com"]
+          }
+        ]
       }
     </script>
   </head>
