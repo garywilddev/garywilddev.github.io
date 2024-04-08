@@ -139,10 +139,23 @@ function navBar() {
   /* END NAV-BAR */
 }
 
+function positionEffectContainer() {
+  const burger = document.getElementById("burger-container");
+  const { right } = burger.getBoundingClientRect();
+  const bodyRect = document.body.getBoundingClientRect();
+
+  const effectContainer = document.getElementById("effect-container");
+  effectContainer.style.setProperty(
+    "--beforeMargin",
+    `${bodyRect.right - right}px`
+  );
+}
+
 $(() => {
   selectCurrentSection();
   translateMain();
   toTop();
   navBar();
   resizeHero();
+  positionEffectContainer();
 });

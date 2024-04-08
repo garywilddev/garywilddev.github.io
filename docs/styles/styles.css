@@ -634,6 +634,7 @@ header {
     width: var(--top-mobile-button-width);
     height: var(--top-mobile-button-height);
     margin: var(--top-mobile-button-margin);
+    margin-right: calc(var(--beforeMargin) + var(--top-mobile-button-margin));
     content: "";
     top: var(--height-element-0);
     right: var(--width-element-0);
