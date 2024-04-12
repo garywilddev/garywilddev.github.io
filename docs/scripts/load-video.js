@@ -75,30 +75,15 @@ $(() => {
   function sourceOpen(_) {
     sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
     getFileLength(assetURL, function (fileLength) {
-      /*console.log({ fileLength });
-      console.log((fileLength / 1024 / 1024).toFixed(2), "MB");*/
+      /*console.log((fileLength / 1024 / 1024).toFixed(2), "MB");*/
       segmentLength = Math.round(fileLength / totalSegments);
       //console.log(totalLength, segmentLength);
       fetchRange(assetURL, 0, segmentLength, appendSegment);
       requestedSegments[0] = true;
       video.addEventListener("timeupdate", checkBuffer);
       video.addEventListener("canplay", function () {
-        console.log({ duration: video.duration });
         segmentDuration = video.duration / totalSegments;
         video.play();
-      });
-      video.addEventListener("loadedmetadata", () => {
-        // It should have been already available here
-        console.log("duration:", video.duration);
-        // Handle chrome's bug
-        if (video.duration === Infinity) {
-          // Set it to bigger than the actual duration
-          video.currentTime = 1e101;
-        }
-      });
-      video.addEventListener("durationchange", function () {
-        // Check for duration
-        console.log("Duration change", video.duration);
       });
       video.addEventListener("seeking", seek);
     });
@@ -119,7 +104,7 @@ $(() => {
     xhr.responseType = "arraybuffer";
     xhr.setRequestHeader("Range", "bytes=" + start + "-" + end);
     xhr.onload = function () {
-      console.log("fetched bytes: ", start, end);
+      /*console.log("fetched bytes: ", start, end);*/
       bytesFetched += end - start + 1;
       cb(xhr.response);
     };
@@ -133,13 +118,12 @@ $(() => {
   function checkBuffer(_) {
     var currentSegment = getCurrentSegment();
     if (currentSegment === totalSegments && haveAllSegments()) {
-      console.log("last segment", mediaSource.readyState);
+      /*console.log("last segment", mediaSource.readyState);*/
       mediaSource.endOfStream();
       video.removeEventListener("timeupdate", checkBuffer);
     } else if (shouldFetchNextSegment(currentSegment)) {
-      console.log({ requestedSegments });
       requestedSegments[currentSegment] = true;
-      console.log("time to fetch next chunk", video.currentTime);
+      /*console.log("time to fetch next chunk", video.currentTime);*/
       fetchRange(
         assetURL,
         bytesFetched,
@@ -151,7 +135,7 @@ $(() => {
   }
 
   function seek(e) {
-    console.log(e);
+    /*console.log(e);*/
     if (mediaSource.readyState === "open") {
       sourceBuffer.abort();
       /*console.log(mediaSource.readyState);*/
@@ -172,13 +156,6 @@ $(() => {
   }
 
   function shouldFetchNextSegment(currentSegment) {
-    console.log({
-      currentTime: video.currentTime,
-      segmentDuration,
-      currentSegment,
-      requestedSegments,
-    });
-
     return (
       video.currentTime > segmentDuration * currentSegment * 0.8 &&
       !requestedSegments[currentSegment]
