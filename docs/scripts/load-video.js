@@ -139,10 +139,11 @@ $(() => {
     if (mediaSource.readyState === "open") {
       sourceBuffer.abort();
       /*console.log(mediaSource.readyState);*/
-    } else {
+    }
+    /*else {
       console.log("seek but not open?");
       console.log(mediaSource.readyState);
-    }
+    }*/
   }
 
   function getCurrentSegment() {
